@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Stepper Example</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+   
+</head>
+
+<body>
+    <div id="headerPlaceholder"></div>
+
+    <div class="steps-agent-job-parent mt-5">
+
+   
+
+    <div class="container mt-4 p-5">
+        You are applying for <a href="#" class="text-decoration-none a-Real-Estate-Sales-Manager">-Real Estate Sales Manager - Nashville (54451)</a> 
+        <div class="stepper-wrapper mt-5">
+            <div class="stepper-item completed" data-step="1">
+                <div class="step-counter">1</div>
+                <div class="step-name">First</div>
+                <h1>h</h1>
+            </div>
+            <div class="stepper-item" data-step="2">
+                <div class="step-counter">2</div>
+                <div class="step-name">Second</div>
+            </div>
+            <div class="stepper-item" data-step="3">
+                <div class="step-counter">3</div>
+                <div class="step-name">Third</div>
+            </div>
+            <div class="stepper-item" data-step="4">
+                <div class="step-counter">4</div>
+                <div class="step-name">Fourth</div>
+            </div>
+            <div class="stepper-item" data-step="5">
+                <div class="step-counter">5</div>
+                <div class="step-name">Fifth</div>
+            </div>
+            <div class="stepper-item" data-step="6">
+                <div class="step-counter">6</div>
+                <div class="step-name">Sixth</div>
+            </div>
+        </div>
+
+        <div class="step-content active-content" id="step-1-content">
+            <div class="row">
+                
+                <div class="col-md-8">
+                    <h2 class="text-xl font-semibold text-foreground mb-4">My Information</h2>
+                    <div class="p-6 bg-card rounded-lg shadow-md">
+                       
+                        <form>
+                            
+                            <div class="mb-4">
+                                <label for="country" class="form-label text-muted-foreground">Country*</label>
+                                <select id="country" class="form-select">
+                                    <option>United States of America</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="first-name" class="form-label text-muted-foreground">First Name*</label>
+                                <input type="text" id="first-name" class="form-control" required />
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="last-name" class="form-label text-muted-foreground">Last Name*</label>
+                                <input type="text" id="last-name" class="form-control" required />
+                            </div>
+            
+                            <div class="mb-4">
+                                <label class="form-label text-muted-foreground">I have a preferred name</label>
+                                <select class="form-select">
+                                    <option>No</option>
+                                </select>
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="address-line1" class="form-label text-muted-foreground">Address Line 1*</label>
+                                <input type="text" id="address-line1" class="form-control" required />
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="address-line2" class="form-label text-muted-foreground">Address Line 2</label>
+                                <input type="text" id="address-line2" class="form-control" />
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="city" class="form-label text-muted-foreground">City*</label>
+                                <input type="text" id="city" class="form-control" required />
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="state" class="form-label text-muted-foreground">State*</label>
+                                <select id="state" class="form-select">
+                                    <option>Please Select</option>
+                                </select>
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="zip" class="form-label text-muted-foreground">Zip/Postal Code*</label>
+                                <input type="text" id="zip" class="form-control" required />
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="email" class="form-label text-muted-foreground">Email Address*</label>
+                                <input type="email" id="email" class="form-control" required />
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="device-type" class="form-label text-muted-foreground">Phone Device Type*</label>
+                                <select id="device-type" class="form-select">
+                                    <option>Please Select</option>
+                                </select>
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="country-phone" class="form-label text-muted-foreground">Country's Phone Code*</label>
+                                <select id="country-phone" class="form-select">
+                                    <option>United States of America (+1)</option>
+                                </select>
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="phone" class="form-label text-muted-foreground">Phone*</label>
+                                <input type="tel" id="phone" class="form-control" required />
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="referral" class="form-label text-muted-foreground">How did you hear about us?*</label>
+                                <select id="referral" class="form-select">
+                                    <option>Please Select</option>
+                                </select>
+                            </div>
+            
+                            <div class="mb-4">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" required />
+                                    By checking this box, I consent to receive transactional and marketing text messages from [Brand].
+                                </label>
+                            </div>
+            
+                            <!-- <button type="submit" class="btn btn">Next</button> -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn" onclick="nextStep(1)">Next</button>
+        </div>
+
+        <div class="step-content" id="step-2-content">
+            <div class="row">
+                
+                <div class="col-md-8">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold text-foreground mb-4">My Information</h2>
+                
+                        <!-- Experience Section -->
+                        <div class="d-flex parent-edu-back">
+                            <button id="add-experience-btn" class="step-button p-2 ">+ Add Experience</button>
+                            <button id="delete-experience-btn" class="delete-btn-red-lk02 mt-5" style="display:none;">-</button>
+                        </div>
+                        <form id="experience-form" style="display: none;">
+                            <div class="form-group-xdf34mn">
+                                <label for="jobTitle" class="label-primary-z23d2">Job title<span class="required-x48sa">*</span></label>
+                                <input type="text" id="jobTitle" class="input-field-abc452" required>
+                            </div>
+                
+                            <div class="form-group-xdf34mn">
+                                <label for="company" class="label-primary-z23d2">Company<span class="required-x48sa">*</span></label>
+                                <input type="text" id="company" class="input-field-abc452" required>
+                            </div>
+                
+                            <div class="form-group-xdf34mn">
+                                <label for="from" class="label-primary-z23d2">From<span class="required-x48sa">*</span></label>
+                                <input type="text" id="from" class="input-field-abc452" required>
+                            </div>
+                
+                            <div class="form-group-xdf34mn">
+                                <label for="to" class="label-primary-z23d2">To<span class="required-x48sa">*</span></label>
+                                <input type="text" id="to" class="input-field-abc452" required>
+                            </div>
+                
+                            <div class="form-group-xdf34mn checkbox-wrapper-az12">
+                                <input type="checkbox" id="currentWork" class="checkbox-xc99d">
+                                <label for="currentWork" class="label-primary-z23d2">I currently work here</label>
+                            </div>
+                
+                            <div class="form-group-xdf34mn">
+                                <label for="location" class="label-primary-z23d2">Location</label>
+                                <input type="text" id="location" class="input-field-abc452">
+                            </div>
+                
+                            <div class="form-group-xdf34mn">
+                                <label for="roleDescription" class="label-primary-z23d2">Role description</label>
+                                <textarea id="roleDescription" class="textarea-desc-gd21f"></textarea>
+                            </div>
+                        </form>
+                
+                        <!-- Education Section -->
+                        <h2 class="step-title mt-4">Education:</h2>
+                        <div class="d-flex parent-edu-back">
+                            <button id="add-education-btn" class="step-button p-2">+ Add Education</button>
+                            <button id="delete-education-btn" class="delete-btn-red-lk02 mt-5" style="display:none;">-</button>
+                        </div>
+                        <form id="education-form" style="display: none;">
+                            <div class="form-group-xdf34mn">
+                                <label for="degree" class="label-primary-z23d2">Degree<span class="required-x48sa">*</span></label>
+                                <input type="text" id="degree" class="input-field-abc452" required>
+                            </div>
+                
+                            <div class="form-group-xdf34mn">
+                                <label for="school" class="label-primary-z23d2">School<span class="required-x48sa">*</span></label>
+                                <input type="text" id="school" class="input-field-abc452" required>
+                            </div>
+                
+                            <div class="form-group-xdf34mn">
+                                <label for="educationFrom" class="label-primary-z23d2">From<span class="required-x48sa">*</span></label>
+                                <input type="text" id="educationFrom" class="input-field-abc452" required>
+                            </div>
+                
+                            <div class="form-group-xdf34mn">
+                                <label for="educationTo" class="label-primary-z23d2">To<span class="required-x48sa">*</span></label>
+                                <input type="text" id="educationTo" class="input-field-abc452" required>
+                            </div>
+                
+                            <div class="form-group-xdf34mn">
+                                <label for="locationEducation" class="label-primary-z23d2">Location</label>
+                                <input type="text" id="locationEducation" class="input-field-abc452">
+                            </div>
+                
+                            <div class="form-group-xdf34mn">
+                                <label for="roleDescriptionEducation" class="label-primary-z23d2">Description</label>
+                                <textarea id="roleDescriptionEducation" class="textarea-desc-gd21f"></textarea>
+                            </div>
+                        </form>
+                        <!-- webiste -->
+                                                 <!-- Experience Section -->
+                    
+                                            
+                         <!-- end website -->
+                    </div>
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold text-foreground mb-4">Add Websites</h2>
+                
+                        <!-- Add Websites Button -->
+                        <div class="d-flex parent-edu-back">
+                            <button id="add-website-btn" class="step-button p-2">+ Add Website</button>
+                        </div>
+                
+                        <!-- Websites will be appended here dynamically -->
+                        <div id="website-list" class="website-list mt-5"></div>
+                        <button class="btn btn-primary" onclick="nextStep(2)">Next</button>
+                    </div>
+                    
+                </div>
+                </div>
+            
+        </div>
+
+        <div class="step-content" id="step-3-content">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="p-4  rounded ">
+                        <h2 class="text-xl font-semibold text-foreground mb-4">Application Question</h2>
+
+                        
+                        <div class="mb-4">
+                            <label for="age-verification" class="form-label">Are you at least 18 years of age? Or if under age 18, can you provide work permits?*</label>
+                            <select id="age-verification" class="form-select">
+                                <option selected>Please Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <label for="legal-right" class="form-label">Do you have the legal right to work in the country to which you are applying?*</label>
+                            <select id="legal-right" class="form-select">
+                                <option selected>Please Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <label for="visa-support" class="form-label">Will you need visa support to continue or extend your current work authorization status? (ex.. H1-B, TN, OPT, CPT, etc.)*</label>
+                            <select id="visa-support" class="form-select">
+                                <option selected>Please Select</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <label for="preferred-pronouns" class="form-label">(Optional) Please share your preferred pronouns:</label>
+                            <select id="preferred-pronouns" class="form-select">
+                                <option selected>Please Select</option>
+                                <option>He/Him</option>
+                                <option>She/Her</option>
+                                <option>They/Them</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="nextStep(3)">Next</button>
+                    </div>
+                    
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="step-content" id="step-4-content">
+           <div class="row">
+            <div class="col-md-8">
+                <div class="p-4 ">
+                    <h2 class="text-xl font-semibold text-foreground mb-4">Additional Application Question</h2>
+
+                    <form>
+                        <div class="mb-4">
+                            <label class="form-label" for="license">Do you currently hold an active and unrestricted real estate license? (Please note: An active real estate license is required for this role.)*</label>
+                            <select id="license" class="form-select">
+                                <option selected>Please Select</option>
+                            </select>
+                        </div>
+                
+                        <div class="mb-4">
+                            <label class="form-label" for="residential-experience">How many residential real estate deals have you completed as an agent (excluding leases)?*</label>
+                            <select id="residential-experience" class="form-select">
+                                <option selected>Please Select</option>
+                            </select>
+                        </div>
+                
+                        <div class="mb-4">
+                            <label class="form-label" for="annual-volume">What has been your average annual sales volume for the past two years?*</label>
+                            <select id="annual-volume" class="form-select">
+                                <option selected>Please Select</option>
+                            </select>
+                        </div>
+                
+                        <div class="mb-4">
+                            <label class="form-label" for="redfin-agent">Are you currently, or have you ever been a Redfin Partner Agent?*</label>
+                            <select id="redfin-agent" class="form-select">
+                                <option selected>Please Select</option>
+                            </select>
+                        </div>
+                
+                        <div class="mb-4">
+                            <label class="form-label" for="license-action">Within the last 10 years, have you had any action (such as a fine, suspension, revocation, censure, etc.) taken against your real estate license or any other professional license?*</label>
+                            <select id="license-action" class="form-select">
+                                <option selected>Please Select</option>
+                            </select>
+                        </div>
+                
+                        <div class="mb-4">
+                            <label class="form-label" for="discipline">Have you ever been disciplined by any local board of Realtors, local Realtor Association, the National Association of Realtors, or any other real estate association or governing body?*</label>
+                            <select id="discipline" class="form-select">
+                                <option selected>Please Select</option>
+                            </select>
+                        </div>
+                
+                        <div class="mb-4">
+                            <label class="form-label" for="investigation">Are you currently under investigation or is there a pending charge against you involving your real estate license?*</label>
+                            <select id="investigation" class="form-select">
+                                <option selected>Please Select</option>
+                            </select>
+                        </div>
+                
+                        <div class="mb-4">
+                            <label class="form-label">Are you a member of the following real estate associations? Select all that apply:</label>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="nareb" class="form-check-input" />
+                                <label for="nareb" class="form-check-label">NAREB</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="nahrep" class="form-check-input" />
+                                <label for="nahrep" class="form-check-label">NAHREP</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="area" class="form-check-input" />
+                                <label for="area" class="form-check-label">AREA</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input type="checkbox" id="other" class="form-check-input" />
+                                <label for="other" class="form-check-label">Other</label>
+                            </div>
+                        </div>
+                
+                        <div class="mb-4">
+                            <label class="form-label" for="association">If so, which association(s)?</label>
+                            <textarea id="association" class="form-control" rows="3"></textarea>
+                        </div>
+                
+                        <button class="btn btn-primary" onclick="nextStep(4)">Next</button>
+                        <!-- <button type="submit" class="btn btn-secondary">Submit</button> -->
+                    </form>
+                   
+                </div>
+                
+            </div>
+           </div>
+            
+        </div>
+
+        <div class="step-content" id="step-5-content">
+           <div class="row">
+            <div class="col-md-8">
+                <div class="p-4">
+                    <h2 class="h5 fw-semibold mb-4">Voluntary Disclosures</h2>
+                    <p class="text-muted mb-4">Instructions</p>
+                    <p class="mb-4">
+                        A diverse, inclusive culture is vital to Redfin's mission of making real estate better for people from all walks of life. We constantly strive to build a company that reflects the varied backgrounds and experiences of our clients. You are being given the opportunity to provide the following information in order to help us comply with federal and state Equal Employment Opportunity laws.
+                    </p>
+                    <p class="mb-4">
+                        Please note that your response will be recorded and maintained in a confidential manner. This information is voluntary and will not be considered during the hiring process or thereafter. Any information you provide will be recorded and maintained in a confidential manner.
+                    </p>
+                    
+                    <h3 class="h6 fw-semibold mt-4 mb-2">Veteran Status</h3>
+                    <select class="form-select mb-4">
+                        <option selected>Please Select</option>
+                        <option>Disabled Veteran</option>
+                        <option>Recently Separated Veteran</option>
+                        <option>Other Protected Veteran</option>
+                    </select>
+                
+                    <h3 class="h6 fw-semibold mt-4 mb-2">Race</h3>
+                    <select class="form-select mb-4">
+                        <option selected>Please Select</option>
+                        <option>White</option>
+                        <option>Black or African American</option>
+                        <option>Asian</option>
+                        <option>Hispanic or Latino</option>
+                        <option>Other</option>
+                    </select>
+                
+                    <h3 class="h6 fw-semibold mt-4 mb-2">Gender</h3>
+                    <select class="form-select mb-4">
+                        <option selected>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Non-binary</option>
+                        <option>Prefer not to say</option>
+                    </select>
+                
+                    <h2 class="h5 fw-semibold mt-4 mb-4">Terms and Conditions</h2>
+                    <h3 class="h6 fw-semibold mb-2">Terms & Conditions and Nondisclosure Agreement</h3>
+                    <p class="mb-4">By checking the box below, you expressly agree to the Redfin Nondisclosure Agreement and give Redfin consent to use your personal data in the following ways...</p>
+                    <p class="mb-4">
+                        <strong>Interview Nondisclosure Agreement</strong>
+                    </p>
+                    <p class="mb-4">This interview Non-Disclosure Agreement ("Agreement") is made and entered into between Redfin and Candidate for potential employment or independent contractor services...</p>
+                </div>
+                
+            </div>
+           </div>
+            <button class="btn btn-primary" onclick="nextStep(5)">Next</button>
+        </div>
+
+        <div class="step-content" id="step-6-content">
+            <div class="p-4  text-dark">
+                <h2 class="h5 fw-bold mb-4">Review</h2>
+                <p class="text-muted mb-6">
+                    Your application has not yet been submitted. Please review your application and then click the submit button at the bottom of the page to submit your application.
+                </p>
+                
+                <div class="mb-4">
+                    <h3 class="h6 fw-semibold mb-2">My Information <a class="btn btn-link text-primary p-0">Edit</a></h3>
+                    <ul class="list-unstyled">
+                        <li><strong>Country:</strong> Pakistan</li>
+                        <li><strong>First Name:</strong> Muhammad</li>
+                        <li><strong>Last Name:</strong> Ahmad</li>
+                        <li><strong>Local First Name:</strong> Ahmii</li>
+                        <li><strong>Local Primary Name:</strong> Ahmii</li>
+                        <li><strong>I have a preferred name:</strong> Yes</li>
+                        <li><strong>Preferred First Name:</strong> Ahmad</li>
+                        <li><strong>Preferred Last Name:</strong> Qaim</li>
+                        <li><strong>Address Line 1:</strong> sunny purlyk</li>
+                        <li><strong>City:</strong> rahimyar khan</li>
+                        <li><strong>Zip/Postal Code:</strong> 04200</li>
+                        <li><strong>Email Address:</strong> softicon.pk@gmail.com</li>
+                        <li><strong>Phone Device Type:</strong> Mobile</li>
+                        <li><strong>Phone:</strong> 3406342040</li>
+                        <li><strong>How did you hear about us?:</strong> Website</li>
+                        <li><strong>Source:</strong> Rediff.com</li>
+                    </ul>
+                </div>
+            
+                <div class="mb-4">
+                    <h3 class="h6 fw-semibold mb-2">My Experience <a class="btn btn-link text-primary p-0">Edit</a></h3>
+                    <p>No experience listed.</p>
+                </div>
+            
+                <div class="mt-4">
+                    <h3 class="h6 fw-semibold mb-2">Social Network URLs:</h3>
+                    <p>No social network URLs provided.</p>
+                </div>
+            </div>
+            
+            <button class="btn btn-success" onclick="finish()">Finish</button>
+        </div>
+        
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let currentStep = 1;
+
+        function nextStep(step) {
+            // Mark current step as completed
+            $(`.stepper-item[data-step="${step}"]`).addClass('completed').removeClass('active');
+
+            // Hide current step content
+            $(`#step-${step}-content`).removeClass('active-content');
+
+            // Move to the next step
+            currentStep++;
+            if (currentStep <= 6) {
+                // Update stepper item to active
+                $(`.stepper-item[data-step="${currentStep}"]`).addClass('active');
+                // Show the active step content
+                $(`#step-${currentStep}-content`).addClass('active-content');
+            }
+        }
+
+        function finish() {
+            alert("Application completed!");
+        }
+        //
+        
+            document.addEventListener("DOMContentLoaded", function() {
+              // Experience Section
+              var addExperienceBtn = document.getElementById("add-experience-btn");
+              var experienceForm = document.getElementById("experience-form");
+              var deleteExperienceBtn = document.getElementById("delete-experience-btn");
+          
+              addExperienceBtn.addEventListener("click", function() {
+                experienceForm.style.display = "block";  // Show form
+                addExperienceBtn.style.display = "none"; // Hide "+ Add Experience" button
+                deleteExperienceBtn.style.display = "block"; // Show "-" button
+              });
+          
+              deleteExperienceBtn.addEventListener("click", function() {
+                experienceForm.style.display = "none";  // Hide form
+                addExperienceBtn.style.display = "block"; // Show "+ Add Experience" button
+                deleteExperienceBtn.style.display = "none"; // Hide "-" button
+              });
+          
+              // Education Section
+              var addEducationBtn = document.getElementById("add-education-btn");
+              var educationForm = document.getElementById("education-form");
+              var deleteEducationBtn = document.getElementById("delete-education-btn");
+          
+              addEducationBtn.addEventListener("click", function() {
+                educationForm.style.display = "block";  // Show form
+                addEducationBtn.style.display = "none"; // Hide "+ Add Education" button
+                deleteEducationBtn.style.display = "block"; // Show "-" button
+              });
+          
+              deleteEducationBtn.addEventListener("click", function() {
+                educationForm.style.display = "none";  // Hide form
+                addEducationBtn.style.display = "block"; // Show "+ Add Education" button
+                deleteEducationBtn.style.display = "none"; // Hide "-" button
+              });
+            });
+          //to do webistr
+          document.addEventListener("DOMContentLoaded", function() {
+            var addWebsiteBtn = document.getElementById("add-website-btn");
+            var websiteList = document.getElementById("website-list");
+    
+            var websiteCount = 0; // Track the number of websites
+    
+            // Function to create a new website input with a delete button
+            addWebsiteBtn.addEventListener("click", function() {
+                websiteCount++; // Increment to give a unique ID for each website input
+    
+                // Create a new div to hold the input and the delete button
+                var newWebsiteDiv = document.createElement("div");
+                newWebsiteDiv.classList.add("website-entry", "d-flex", "mb-2");
+                newWebsiteDiv.id = "website-entry-" + websiteCount; // Assign a unique ID to the div
+    
+                // Create the input field for the website
+                var newWebsiteInput = document.createElement("input");
+                newWebsiteInput.type = "text";
+                newWebsiteInput.placeholder = "Enter website URL";
+                newWebsiteInput.classList.add("input-field-abc452", "mr-2");
+                newWebsiteInput.id = "website-" + websiteCount;
+    
+                // Create the delete button ("-")
+                var deleteWebsiteBtn = document.createElement("button");
+                deleteWebsiteBtn.classList.add("delete-btn-red-lk02");
+                deleteWebsiteBtn.innerHTML = "-";
+    
+                // When delete button is clicked, remove the input and button pair
+                deleteWebsiteBtn.addEventListener("click", function() {
+                    newWebsiteDiv.remove(); // This directly removes the parent div containing the input and button
+                });
+    
+                // Append the input and delete button to the new div
+                newWebsiteDiv.appendChild(newWebsiteInput);
+                newWebsiteDiv.appendChild(deleteWebsiteBtn);
+    
+                // Append the new div to the website list
+                websiteList.appendChild(newWebsiteDiv);
+            });
+        });
+       
+            // Load the header from the external file
+            fetch('user-header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('headerPlaceholder').innerHTML = data;
+                });
+       
+          
+    </script>
+</body>
+
+</html>

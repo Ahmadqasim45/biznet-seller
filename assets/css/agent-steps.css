@@ -1,0 +1,173 @@
+
+.steps-agent-job-parent{
+
+
+.stepper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+
+.stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    border: 2px solid white; /* Border for inactive steps */
+    background: transparent; /* Transparent background for inactive steps */
+    color: white; /* Text color for inactive steps */
+    border-radius: 10px; /* Optional: rounded corners */
+    padding: 10px;
+    transition: background 0.3s ease, border 0.3s ease; /* Smooth transition */
+}
+
+.stepper-item.active .step-counter {
+    background: #0c2640; /* Active background color for step counter */
+    color: white; /* Active text color for step counter */
+   position: absolute;
+   bottom: 10% !important;
+   
+}
+
+.stepper-item.completed .step-counter {
+    background-color: #0c2640; /* Background color for completed step counter */
+    color: white; /* Text color for completed step counter */
+}
+
+.stepper-item.completed {
+    color: white; /* Completed text color */
+    border: none; /* No border for completed step */
+}
+
+.stepper-item::before,
+.stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    z-index: 2;
+   }
+
+.stepper-item::before {
+    left: -50%;
+}
+
+.stepper-item::after {
+    left: 50%;
+}
+
+.step-counter {
+    position: absolute;
+    z-index: 5;
+    
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ccc; /* Default muted background color for step counter */
+    margin-bottom: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+.step-name {
+    text-align: center;
+}
+
+.step-content {
+    display: none; /* Initially hide all step content */
+}
+
+.active-content {
+    display: block; /* Show the active step content */
+}
+.a-Real-Estate-Sales-Manager{
+color: #0c2640;
+font-size: larger;
+font-weight: bold;
+}
+.form-select,.form-control{border: 1px solid black;
+    border-radius: 0;
+
+}
+.form-group-xdf34mn {
+    margin-bottom: 15px;
+  }
+  
+  .label-primary-z23d2 {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4A4A4A;
+  }
+  
+  .required-x48sa {
+    color: red;
+  }
+  
+  .input-field-abc452 {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .checkbox-wrapper-az12 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-xc99d {
+    margin-right: 10px;
+  }
+  
+  .textarea-desc-gd21f {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button.delete-btn-red-lk02 {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    left: 10px;
+   
+  }
+  
+.parent-edu-back{
+display: flex;
+align-items: center;
+justify-content:space-between;
+}
+@media (max-width: 768px) {
+    .step-counter {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .step-name {
+        font-size: 12px;
+    }
+    .step-counter{
+top: 5%;
+    }
+}
+.stepper-wrapper{
+    margin-left: 0 !important;
+}
+}
