@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+.associate-agent{
+
+    .associate-agent{
+        height: fit-content;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url('/assets/images/img_agent_career/greg-rivers-rChFUMwAe7E-unsplash.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 50px;
+        padding-block: 120px;
+        margin-top: 50px;
+    }
+    
+    .associate-agent-title {
+        font-size: 56px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    
+    
+    
+    
+    /* Mobile and tablet responsiveness */
+    @media (max-width: 768px) {
+        .associate-agent-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    
+      
+    
+     
+    }
+    
+    @media (max-width: 576px) {
+        .associate-agent-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+    
+    
+    }
+    .bg-color-oap{
+        background-color: #f2f2f2;
+    }
+    .border-doted{
+        border-left: solid 1px;
+        border-left-style: dashed;
+    }
+    
+}
+
