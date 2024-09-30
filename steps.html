@@ -15,9 +15,7 @@
 
     <div class="steps-agent-job-parent mt-5">
 
-   
-
-    <div class="container mt-4 p-5">
+ <div class="container mt-4 p-5">
         You are applying for <a href="#" class="text-decoration-none a-Real-Estate-Sales-Manager">-Real Estate Sales Manager - Nashville (54451)</a> 
         <div class="stepper-wrapper mt-5">
             <div class="stepper-item completed" data-step="1">
@@ -395,11 +393,13 @@
                             <textarea id="association" class="form-control" rows="3"></textarea>
                         </div>
                 
-                        <button class="btn btn-primary" onclick="nextStep(4)">Next</button>
+                        
                         <!-- <button type="submit" class="btn btn-secondary">Submit</button> -->
                     </form>
+                    
                    
                 </div>
+                <button class="btn btn-primary mx-5" onclick="nextStep(4)">Next</button>
                 
             </div>
            </div>
@@ -500,7 +500,7 @@
                 </div>
             </div>
             
-            <button class="btn btn-success" onclick="finish()">Finish</button>
+           <a href="successfull-apply-job.html"> <button class="btn btn-success" onclick="finish()">Submit</button></a>
         </div>
         
     </div>
@@ -508,7 +508,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
-        let currentStep = 1;
+        let currentStep = 0;
 
         function nextStep(step) {
             // Mark current step as completed
