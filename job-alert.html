@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Job Alert</title>
+        <!-- Bootstrap 5.3.2 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap 5.3.2 JavaScript Bundle -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        
+    </head>
+    <style>
+        .container-job-alert{
+            margin-top: 150px !important;
+        }
+        .bg-card {
+            background-color: #ffffff;
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow-lg */
+            padding: 1.5rem; /* p-6 */
+            height: 100vh; /* Full height */
+            overflow: hidden; /* Hide overflow */
+        }
+
+        .offcanvas-body {
+            overflow-y: auto; 
+            height: calc(100% - 60px); /* Adjust height for fixed buttons */
+        }
+
+        .offcanvas-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px; /* Adjust padding */
+            background-color: #f8f9fa; /* Light background for footer */
+            border-top: 1px solid #dee2e6; /* Border on top */
+            display: flex;
+            align-items: center;
+            justify-content: center !important;
+        }
+
+        .text-destructive {
+            color: #dc3545; /* Bootstrap's danger color */
+        }
+
+        .text-muted-foreground {
+            color: #6c757d; /* Bootstrap muted color */
+        }
+
+        .modal-header {
+            border-bottom: none; /* Remove border */
+        }
+
+        /* Custom styles for inputs */
+        .form-control {
+            border: 1px solid #ced4da; /* Default border color */
+            border-radius: 0.375rem; /* Rounded corners */
+        }
+
+        .form-select {
+            border: 1px solid #ced4da; /* Default border color */
+            border-radius: 0.375rem; /* Rounded corners */
+        }
+    </style>
+   
+
+
+<body class="bg-light ">
+    <div id="headerPlaceholder"></div>
+   
+ <div class="container container-job-alert">
+    <div class="bg-white p-5 mt-5 rounded shadow-sm d-flex flex-column align-items-start justify-content-center ">
+        <h2 class="fs-4 fw-bold">Job Alerts</h2>
+        <p class="text-muted text-center">We’ll send you an email about jobs that match your preferences.</p>
+        
+        <!-- Create Job Alert Button -->
+ <!-- Create Job Alert Button -->
+ <button class="btn d-flex align-items-center  rounded-pill px-4 py-2" data-bs-toggle="offcanvas" data-bs-target="#jobAlertSidebar" aria-controls="jobAlertSidebar">
+    <i class="fa-regular fa-bell px-1"></i> <span>Create Job Alert</span>
+</button>
+
+<!-- Sidebar Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="jobAlertSidebar" aria-labelledby="jobAlertSidebarLabel">
+    <div class="bg-card">
+        <div class="offcanvas-header border-bottom">
+            <h5 id="jobAlertSidebarLabel">Create Job Alert</h5>
+            <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <div class="mb-3">
+                    <label for="job-alert-name" class="form-label">Job Alert Name *</label>
+                    <input type="text" id="job-alert-name" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label for="job-alert-frequency" class="form-label">Job Alert Frequency *</label>
+                    <select id="job-alert-frequency" class="form-select" required>
+                        <option value="" disabled selected>Select One</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                    </select>
+                </div>
+
+                <h3 class="text-md font-semibold text-foreground mb-2">Filters</h3>
+                <p class="text-sm text-muted-foreground mb-4">Select 1 or more filters to create a job alert.</p>
+
+                <div class="mb-3">
+                    <label for="job-category" class="form-label">Job Category</label>
+                    <input type="text" id="job-category" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="locations" class="form-label">Locations</label>
+                    <input type="text" id="locations" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="job-type" class="form-label">Job Type</label>
+                    <input type="text" id="job-type" class="form-control" />
+                </div>
+
+                <div class="mb-5">
+                    <label for="full-part-time" class="form-label ">Full/Part-time</label>
+                    <input type="text" id="full-part-time" class="form-control" />
+                </div>
+            </form>
+        </div>
+        <div class="offcanvas-footer">
+            <button type="button" class="btn btn-secondary mx-1" data-bs-dismiss="offcanvas">Cancel</button>
+            <button type="submit" class="btn text-destructive bg-destructive text-destructive-foreground">Create</button>
+        </div>
+    </div>
+</div>
+        
+        <hr class="my-4 w-100 text-muted" />
+        
+        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+          <img aria-hidden="true" alt="paper airplane" src="https://openui.fly.dev/openui/100x100.svg?text=✈️" class="me-2"/>
+          <p class="text-muted mb-0 mt-2">You currently have no job alerts.</p>
+        </div>
+      </div>
+      
+ </div> 
+ <script>
+    // Load the header from the external file
+    fetch('agent-second.nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('headerPlaceholder').innerHTML = data;
+        });
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

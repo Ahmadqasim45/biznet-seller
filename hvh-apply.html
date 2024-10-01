@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Offer</title>
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<style>
+    .parent-hvh-apply{
+
+   
+  /* Sidebar style for larger screens */
+  .sidebar {
+    width: 200px;
+    height: 500px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  .sidebar ul li {
+    margin: 10px;
+  }
+.container-fluid{
+    position: absolute;
+    left: 0;
+}
+.btn-agent-apply-next{
+    width: 100px;
+}
+.card-mx-steps{
+    border: 0;
+}
+  /* Responsive sidebar on mobile and tablet */
+  @media (max-width: 992px) {
+    .sidebar {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      margin-bottom: 20px;
+    }
+    .sidebar ul {
+      display: flex;
+    }
+    .sidebar ul li {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+    }
+    .sidebar ul li input {
+      border: 2px solid black !important;
+      margin-bottom: 5px;
+    }
+  }
+
+  /* For the step container */
+  .step-container {
+    padding-left: 20px;
+  }
+}
+</style>
+
+<body>
+  <div id="headerPlaceholder"></div>
+
+<main class="parent-hvh-apply mt-5">
+    
+  <div class="container-fluid w-100 mt-5">
+    <div class="row">
+      <!-- Sidebar on the left -->
+
+      <div class="col-lg-3">
+        <div class="sidebar bg-background p-4 rounded-lg shadow-md">
+          <ul class="space-y-2 list-unstyled">
+            <li class="d-flex align-items-center">
+              <input type="radio" id="contact-info" name="options" class="me-2" />
+              <label for="contact-info" class="text-muted">Contact info</label>
+            </li>
+            <li class="d-flex align-items-center">
+              <input type="radio" id="details" name="options" class="me-2" />
+              <label for="details" class="text-muted">Details</label>
+            </li>
+            <li class="d-flex align-items-center">
+              <input type="radio" id="next-steps" name="options" class="me-2" />
+              <label for="next-steps" class="text-muted">Next steps</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main step container on the right -->
+      <div class="col-lg-6 step-container">
+        <!-- Step 1: Personal Information -->
+        <div class="step" id="step1">
+         <!-- contact details -->
+         <div class="card    card-mx-steps p-4" >
+            <h2 class="h5 mb-3 text-center">Great! Let's get started right away.</h2>
+            <form>
+              <!-- First Name -->
+              <div class="mb-3">
+                <label for="first-name" class="form-label">What is your first name?</label>
+                <input type="text" class="form-control" id="first-name" placeholder="First Name" required />
+              </div>
+        
+              <!-- Last Name -->
+              <div class="mb-3">
+                <label for="last-name" class="form-label">What is your last name?</label>
+                <input type="text" class="form-control" id="last-name" placeholder="Last Name" required />
+              </div>
+        
+              <!-- Email Address -->
+              <div class="mb-3">
+                <label for="email" class="form-label">What is your email address?</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required />
+              </div>
+        
+              <!-- Phone Number -->
+              <div class="mb-3">
+                <label for="phone" class="form-label">What is your phone number?</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Phone" required />
+              </div>
+        
+              <!-- SMS Opt-in -->
+              <p class="form-text mb-2">Would you like to opt in to receive job-related updates by SMS? Standard data rates may apply.</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="sms" id="sms-yes" value="yes" />
+                <label class="form-check-label" for="sms-yes">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="sms" id="sms-no" value="no" />
+                <label class="form-check-label" for="sms-no">No</label>
+              </div>
+        
+              <!-- Email Opt-in -->
+              <p class="form-text mt-3 mb-2">Would you like to opt in to receive job-related emails from our team?</p>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="email-opt" id="email-yes" value="yes" />
+                <label class="form-check-label" for="email-yes">Yes</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="email-opt" id="email-no" value="no" />
+                <label class="form-check-label" for="email-no">No</label>
+              </div>
+             
+             
+             
+            </form>
+            <button  class="btn btn btn-agent-apply-next mt-3"  onclick="nextStep(2)">Next</button>
+          </div>
+          
+        </div>
+
+        <!-- Step 2: Contact Information -->
+        <div class="step d-none" id="step2">
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="p-4">
+                  <form>
+                    <!-- Age Question -->
+                    <div class="mb-3">
+                      <label class="form-label">Are you at least 18 years of age?</label>
+                      <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="age" id="age-yes" value="yes" />
+                          <label class="form-check-label" for="age-yes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="age" id="age-no" value="no" />
+                          <label class="form-check-label" for="age-no">No</label>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- Authorization Question -->
+                    <div class="mb-3">
+                      <label class="form-label ">Are you legally authorized to work in the United States?</label>
+                      <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="authorization" id="auth-yes" value="yes" />
+                          <label class="form-check-label" for="auth-yes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="authorization" id="auth-no" value="no" />
+                          <label class="form-check-label" for="auth-no">No</label>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- License Question -->
+                    <div class="mb-3">
+                      <label class="form-label ">Do you have an active real estate license in the state where this job is located?</label>
+                      <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="license" id="license-yes" value="yes" />
+                          <label class="form-check-label" for="license-yes">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="license" id="license-no" value="no" />
+                          <label class="form-check-label" for="license-no">No</label>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- Deals Question -->
+                    <div class="mb-3">
+                      <label class="form-label ">How many residential real estate deals have you completed as an agent (excluding leases)?</label>
+                      <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="deals" id="deals-0-4" value="0-4" />
+                          <label class="form-check-label" for="deals-0-4">0-4 deals</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="deals" id="deals-5-9" value="5-9" />
+                          <label class="form-check-label" for="deals-5-9">5-9 deals</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="deals" id="deals-10-19" value="10-19" />
+                          <label class="form-check-label" for="deals-10-19">10-19 deals</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="deals" id="deals-20-24" value="20-24" />
+                          <label class="form-check-label" for="deals-20-24">20-24 deals</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="deals" id="deals-50+" value="50+" />
+                          <label class="form-check-label" for="deals-50+">50+ deals</label>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- Recent Deals Question -->
+                    <div class="mb-3">
+                      <label class="form-label ">How many residential real estate deals have you completed in the last 24 months?</label>
+                      <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="recent_deals" id="recent-0-4" value="0-4" />
+                          <label class="form-check-label" for="recent-0-4">0-4 deals</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="recent_deals" id="recent-5-9" value="5-9" />
+                          <label class="form-check-label" for="recent-5-9">5-9 deals</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="recent_deals" id="recent-10+" value="10+" />
+                          <label class="form-check-label" for="recent-10+">10+ deals</label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
+         
+              <button class="btn btn btn-agent-apply-next mb-3" onclick="prevStep(1)">Previous</button>
+             <a href="/agent-thanku-page.html"><button class="btn btn btn-agent-apply-next mb-3">Next</button></a> 
+
+        </div>
+
+      
+
+        <!-- Step 4: Review & Submit -->
+        
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  function nextStep(step) {
+    document.querySelectorAll('.step').forEach(function(el) {
+      el.classList.add('d-none');
+    });
+    document.getElementById('step' + step).classList.remove('d-none');
+  }
+
+  function prevStep(step) {
+    document.querySelectorAll('.step').forEach(function(el) {
+      el.classList.add('d-none');
+    });
+    document.getElementById('step' + step).classList.remove('d-none');
+  }
+
+  function submitForm() {
+    alert("Application submitted successfully!");
+
+  }
+</script>
+    <div id="headerPlaceholder"></div>
+    <script>
+      // Load the header from the external file
+      fetch('user-header.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('headerPlaceholder').innerHTML = data;
+          });
+  </script>
+
+</body>
+</html>
