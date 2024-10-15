@@ -1,6 +1,8 @@
 @import '/assets/css/user-header.css';
 @import '/assets/css/join-as-agent.css';
 @import '/assets/css/agent-steps.css';
+@import '/assets/css/candidate-login.css';
+
 * {
     margin: 0px;
     padding: 0px;

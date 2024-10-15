@@ -1,0 +1,75 @@
+.parent-candidate-login{
+
+
+.full-screen-overlay-hero {
+    height: fit-content;
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('/assets/images/building-4579244_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin-top: 50px;
+    height: 400px;
+}
+.form-container-x123 {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-red-rounded {
+    background-color:#0c2640;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.social-icons-group-mix {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-text-center {
+    text-align: center;
+}
+
+.form-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
+
+.tab-pane {
+    padding: 20px 0;
+}
+
+.nav-tabs-custom-styling .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+}
+
+.nav-tabs-custom-styling .nav-link.active {
+    border-bottom: 2px solid #d9534f;
+    color: #d9534f;
+}
+}
