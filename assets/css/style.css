@@ -2,6 +2,8 @@
 @import '/assets/css/join-as-agent.css';
 @import '/assets/css/agent-steps.css';
 @import '/assets/css/candidate-login.css';
+@import '/assets/css/second-nav.css';
+
 
 * {
     margin: 0px;
